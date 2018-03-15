@@ -1,0 +1,10 @@
+# Logs and baks
+*log
+*bak
+*out
+
+# If ignoreing pdfs
+# *pdf
+
+# synctex stuff
+*synctex.gz

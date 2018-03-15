@@ -1,0 +1,176 @@
+%% ****** Start of file template.aps ****** %
+%%
+%%
+%%   This file is part of the APS files in the REVTeX 4 distribution.
+%%   Version 4.0 of REVTeX, August 2001
+%%
+%%
+%%   Copyright (c) 2001 The American Physical Society.
+%%
+%%   See the REVTeX 4 README file for restrictions and more information.
+%%
+%
+% This is a template for producing manuscripts for use with REVTEX 4.0
+% Copy this file to another name and then work on that file.
+% That way, you always have this original template file to use.
+%
+% Group addresses by affiliation; use superscriptaddress for long
+% author lists, or if there are many overlapping affiliations.
+% For Phys. Rev. appearance, change preprint to twocolumn.
+% Choose pra, prb, prc, prd, pre, prl, prstab, or rmp for journal
+%  Add 'draft' option to mark overfull boxes with black boxes
+%  Add 'showpacs' option to make PACS codes appear
+%\documentclass[aps,prb,twocolumn,showpacs,superscriptaddress,groupedaddress,10pt]{revtex4-1}  % for review and submission
+%\documentclass[aps,preprint,showpacs,superscriptaddress,groupedaddress]{revtex4-1}  % for double-spaced preprint
+\documentclass[prl,notitlepage,aps]{revtex4-1}
+%\documentclass[twocolumn,showpacs,prl]{revtex4}
+%\documentclass[aps,preprint,showpacs,superscriptaddress,groupedaddress]{revtex4}
+\usepackage{epsfig}
+%\usepackage{standalone}
+\usepackage{hyperref}
+\usepackage{graphicx}  % needed for figures
+\usepackage{dcolumn}   % needed for some tables
+\usepackage{bm}        % for math
+%\usepackage{amssymb}   % for math
+\usepackage{amsmath}
+%\usepackage{amsthm}
+\usepackage{amsfonts}
+%\usepackage{mathrsfs}
+\usepackage{bbm}
+\usepackage{float}
+\usepackage[caption=false]{subfig}
+\usepackage{enumerate}
+%\usepackage{color}
+\usepackage{tikz}
+\usepgflibrary{arrows.meta}
+\usepackage{physics}
+
+%\newcommand{\pspace}{\vspace*{10pt}}
+\newcommand{\bb}[1]{\ensuremath{\mathbbm{#1}}}
+%\newcommand{\ep}{being that which was required.}
+%\newcommand{\real}{\bb{R}}
+%\newcommand{\nat}{\bb{N}}
+%\newcommand{\com}{\bb{C}}
+%\newcommand{\zint}{\bb{Z}}
+\newcommand{\infd}{\ensuremath{\,\mathrm{d}}}
+\newcommand{\Deriv}{\ensuremath{\bm{D}}}
+\newcommand{\nombre}{\noindent Joseph O'Halloran\\\today\pspace}
+\newcommand{\dir}[1]{\ensuremath{\hat{\bm{#1}}}}
+\newcommand{\dirsym}[1]{\ensuremath{\widehat{\boldsymbol{#1}}}}
+%\newcommand{\qeq}{\ensuremath{\leq\!\geq}}
+\newcommand{\dbox}{\scalebox{0.8}{\rotatebox[origin=c]{45}{\ensuremath{\square}}}}
+\newcommand{\qeq}{\,\raisebox{-8pt}{\ensuremath{\stackrel{\dbox}{\text{\textendash}}}}\,}
+%\newcommand{\bra}[1]{\ensuremath{\left\langle#1\right|}}
+%\newcommand{\ket}[1]{\ensuremath{\left|#1\right\rangle}}
+\newcommand{\inprod}[2]{\ensuremath{\langle#1|#2\rangle}}
+\newcommand{\outprod}[2]{\ensuremath{|#1\rangle\langle#2|}}
+\newcommand{\expect}[1]{\ensuremath{\left\langle #1\right\rangle}}
+\newcommand{\dbar}{\ensuremath{\;\mathchar'26\mkern-14mu\infd}}
+\newcommand{\cn}{$^\text{\color{blue}[citation needed]}$}
+\newcommand{\comment}[1]{{\color{red}[#1]}}
+\newcommand{\He}{${^{3}{He}}$}
+%\newcommand{\Qa}{\mbox{\boldmath$Q1$}}
+\begin{document}
+\title{Title}
+\author{Adil Amin$^1$}
+\author{D.F.~Agterberg$^1$}
+\affiliation{$^1$Department of Physics, University of Wisconsin--Milwaukee, Milwaukee, Wisconsin 53201, USA}
+\date{\today}
+
+\begin{abstract}
+Put abstract here.
+\end{abstract}
+
+%\pacs{}
+\maketitle
+\section{Introduction}
+\label{sec:intro}
+Put introduction here
+\section{Magnetic fluctuation induced double superconducting transitions in  $\text{UPt}_3$}
+\label{UPt3}
+The observation of two superconducting transitions in zero applied field by specific heat measurements\cn has made $\text{UPt}_3$ the most widely studied heavy fermion superconductor. The material shows signatures of antiferromagnetic correlations in  neutron scattering studies \cn. The ordering  in $\text{UPt}_3$ is characterized by the wave vectors \textbf{Q}$_1$=$\frac{1}{2}$\textbf{a}$^*$, \textbf{Q}$_2$=$\frac{1}{2}$(\textbf{b}$^*$-\textbf{a}$^*$), \textbf{Q}$_3$=-$\frac{1}{2}$\textbf{b}$^*$. However signatures of antiferromagnetic order are not seen in other studies like muon spin relaxation ($\mu$sr), specific heat, and magnetization\cn.     
+The starting point for a phenomenological model to account for the double superconducting transition is the Ginzburg-Landau functional for the E representations of $D_{6h}$ in zero field \cite{1989JPSJ...58.4116M}\cite{1989JPCM....1.8135H}\cite{1989JPSJ...58.2244M} {\color{red} check references and see if i remove one}. 
+\begin{align}
+f_{sc} = \alpha\eta_i\eta_i^*+\beta_1\left(\eta_i\eta_i^*\right)^2+ \beta_2\lvert\eta_i\eta_i^*\rvert^2
+\end{align}
+To the free energy the coupling to antiferromagnetism is added. The magnetic order is described by \textbf{M} = m$_1$\textbf{M}$_1$ + m$_2$\textbf{M}$_2$ + m$_3$\textbf{M}$_3$, where \textbf{M}$_1$, \textbf{M}$_2$, \textbf{M}$_3$ order with wave vector \textbf{Q}$_1$, \textbf{Q}$_2$, \textbf{Q}$_3$. The superconducting order parameter couples to translationally invariant product representation of (m$_1$,m$_2$,m$_3$). The coupling is given as \cite{1989JPSJ...58.2244M}
+\begin{align}
+f_{sc-m} =& K_1(m_1^2+m_2^2+m_3^2)(\abs{\eta_1}^2+\abs{\eta_2}^2)\nonumber \\ 
++& K_2 \left[(2m_1^2 - m_2^2-m_3^2)(\abs{\eta_1}^2-\abs{\eta_2}^2)+\sqrt{3}(m_3^2-m_2^2)(\eta_1\eta_2^*+\eta_2\eta_1^*)\right]
+\label{coup}
+\end{align}
+It is assumed in these models that there is a single Q magnetic order with $m_1$ = \textbf{M} and $m_2$ = $m_3$ =0.  Thus the first term of \eqref{coup} just modifies $\alpha$  while the second term leads to a symmetry breaking field term.
+\begin{align}
+f_{SBF} = \gamma M^2 (\abs{\eta_1}^2-\abs{\eta_2}^2)
+\end{align}
+This symmetry breaking allows us the possibility of two transition where with the choice of $\beta_2 >$  0 , the systems first transitions into the real A phase and then later into the time reversal broken B phase at lower temperature. However the experimental signatures of such a symmetry breaking field seem absent \cn (include triple Q order). This raises the question of whether there is an alternate mechanism{\color{red} also what about 1d accidental degeneracy} to generate these two transitions in zero field without the presence of a symmetry breaking field. We here show that coupling the superconducting order parameter to magnetic fluctuations allows us the possibility of two transitions
+\section{Ginzburg - Landau with magnetic fluctuation}
+\label{Landau_UP}
+
+We here assume that there is no symmetry breaking field and hence there is no single Q  which orders. The superconductor is coupled to antiferromagnetic fluctuations and these fluctuations energetically favor a different ground state as favored by the true superconducting state.  Thus it is these fluctuations which provide an intrinsic mechanism for two transitions in $\text{UPt}_3$. 
+We start with the partition function of the system which includes $f_{sc}$ and $f_{sc-m}$. 
+\begin{align}
+\mathcal{Z} &= \int D\eta_i Dm_i  e^{-\beta H}\nonumber\\
+\beta H[\eta_i,m_j] &= \int d^3x \left( \alpha\eta_i\eta_i^*+\beta_1\left(\eta_i\eta_i^*\right)^2+ \beta_2\lvert\eta_i\eta_i^*\rvert^2 + A m_j^2 + K_1(m_1^2+m_2^2+m_3^2)(\abs{\eta_1}^2+\abs{\eta_2}^2)\nonumber\right.\\ 
+&\left.+ K_2 \left[(2m_1^2 - m_2^2-m_3^2)(\abs{\eta_1}^2-\abs{\eta_2}^2)+\sqrt{3}(m_3^2-m_2^2)(\eta_1\eta_2^*+\eta_1^*\eta_2)\right]\right)
+\end{align}
+We see that our magnetic fluctuations $m_i$ are diagonal in the x basis and and are uniform i.e. no $m_i(x)m_i(x')$ terms appear and hence we will be able to integrate these fluctuations (i.e do the Gaussian integral  for each $\int Dm_i$ separately) out to give us a new effective free energy. {\color{red} see if i can write this better} 
+\begin{align}\label{Zm}
+\mathcal{Z}_m&=\int dm_1 \hspace{0.2em} exp\left(-m_1^2\left(A+K_1(\abs{\eta_1}^2+\abs{\eta_2}^2)+2K_2(\abs{\eta_1}^2-\abs{\eta_2}^2)\right)\right) \int dm_2 \hspace{0.2em} exp\left(-m_2^2\left(A+K_1(\abs{\eta_1}^2+\abs{\eta_2}^2)\nonumber\right.\right.\\
+&\left.\left.- K_2(\abs{\eta_1}^2 -\abs{\eta_2}^2)-\sqrt{3}K_2(\eta_1\eta_2^*+\eta_1^*\eta_2)\right)\right)\int dm_3 \hspace{0.2em} exp\left(-m_3^2\left(A+K_1(\abs{\eta_1}^2+\abs{\eta_2}^2)- K_2(\abs{\eta_1}^2 -\abs{\eta_2}^2)\nonumber\right.\right.\\
+&\left.\left.+\sqrt{3}K_2(\eta_1\eta_2^*+\eta_1^*\eta_2)\right)\right)\nonumber\\
+&=\sqrt{\frac{\pi}{A+K_1(\abs{\eta_1}^2+\abs{\eta_2}^2)+2K_2(\abs{\eta_1}^2-\abs{\eta_2}^2)}} \sqrt{\frac{\pi}{A+K_1(\abs{\eta_1}^2+\abs{\eta_2}^2) - K_2(\abs{\eta_1}^2 -\abs{\eta_2}^2)-\sqrt{3}K_2(\eta_1\eta_2^*+\eta_1^*\eta_2)}}\nonumber\\
+&\times \sqrt{\frac{\pi}{A+K_1(\abs{\eta_1}^2+\abs{\eta_2}^2) - K_2(\abs{\eta_1}^2 -\abs{\eta_2}^2)+\sqrt{3}K_2(\eta_1\eta_2^*+\eta_1^*\eta_2)}}\nonumber\\
+&=e^{\frac{1}{2}\ln\left(\frac{\pi}{A+K_1(\abs{\eta_1}^2+\abs{\eta_2}^2)+2K_2(\abs{\eta_1}^2-\abs{\eta_2}^2)}\right)}e^{\frac{1}{2}\ln\left(\frac{\pi}{A+K_1(\abs{\eta_1}^2+\abs{\eta_2}^2) - K_2(\abs{\eta_1}^2 -\abs{\eta_2}^2)-\sqrt{3}K_2(\eta_1\eta_2^*+\eta_1^*\eta_2)}\right)}\nonumber\\
+&\times e^{\frac{1}{2}\ln\left(\frac{\pi}{A+K_1(\abs{\eta_1}^2+\abs{\eta_2}^2) - K_2(\abs{\eta_1}^2 -\abs{\eta_2}^2)+\sqrt{3}K_2(\eta_1\eta_2^*+\eta_1^*\eta_2)}\right)}\nonumber\\
+&=e^{\left(\frac{3}{2}\ln(\pi)-\frac{3}{2}\ln(A)\right)}e^{-\frac{1}{2}\ln\left(1+\frac{K_1}{A}(\abs{\eta_1}^2+\abs{\eta_2}^2)+2\frac{K_2}{A}(\abs{\eta_1}^2-\abs{\eta_2}^2)\right)} e^{-\frac{1}{2}\ln\left(1+\frac{K_1}{A}(\abs{\eta_1}^2+\abs{\eta_2}^2) -\frac{K_2}{A}(\abs{\eta_1}^2 -\abs{\eta_2}^2)-\sqrt{3}\frac{K_2}{A}(\eta_1\eta_2^*+\eta_1^*\eta_2)\right)}\nonumber\\
+&\times e^{-\frac{1}{2}\ln\left(1+\frac{K_1}{A}(\abs{\eta_1}^2+\abs{\eta_2}^2) -\frac{K_2}{A}(\abs{\eta_1}^2 -\abs{\eta_2}^2)+\sqrt{3}\frac{K_2}{A}(\eta_1\eta_2^*+\eta_1^*\eta_2)\right)}
+\end{align}
+We will now expand the logarithmic terms which are dependent on $\eta$ and then we will get a effective free energy. 
+\begin{align}
+	\beta H&= \int d^3x f \nonumber\\
+	f &= f_{sc} + \frac{1}{2} \left(\ln\left(1+\frac{K_1}{A}(\abs{\eta_1}^2+\abs{\eta_2}^2)+2\frac{K_2}{A}			(\abs{\eta_1}^2-\abs{\eta_2}^2)\right)\nonumber\right.\\
+	  &\left.+\ln\left(1+\frac{K_1}{A}(\abs{\eta_1}^2+\abs{\eta_2}^2) -\frac{K_2}{A}(\abs{\eta_1}^2 	-\abs{\eta_2}^2)-\sqrt{3}\frac{K_2}{A}(\eta_1\eta_2^*+\eta_1^*\eta_2)\right)\nonumber\right.\\
+	  &\left.+\ln\left(1+\frac{K_1}{A}(\abs{\eta_1}^2+\abs{\eta_2}^2) -\frac{K_2}{A}				(\abs{\eta_1}^2 -\abs{\eta_2}^2)+\sqrt{3}\frac{K_2}{A}(\eta_1\eta_2^*+\eta_1^*\eta_2)		    \right)\right)
+\end{align}
+We now expand this to order $\eta^4$  and throw away the constant terms. 
+\begin{align}
+	f&=f_{sc} + \frac{1}{2}\left(\frac{K_1}{A}(\abs{\eta_1}^2+\abs{\eta_2}^2)+2\frac{K_2}{A}			(\abs{\eta_1}^2-\abs{\eta_2}^2)\right)-\frac{1}{4}\left(\frac{K_1}{A}(\abs{\eta_1}			^2+\abs{\eta_2}^2)+2\frac{K_2}{A}(\abs{\eta_1}^2-\abs{\eta_2}^2)\right)^2\nonumber\\
+	&+\frac{1}{2}\left(\frac{K_1}{A}(\abs{\eta_1}^2+\abs{\eta_2}^2) -\frac{K_2}{A}						(\abs{\eta_1}^2 -\abs{\eta_2}^2)-\sqrt{3}\frac{K_2}{A}(\eta_1\eta_2^*+\eta_1^*\eta_2)			\right)- \frac{1}{4}\left(\frac{K_1}{A}(\abs{\eta_1}^2+\abs{\eta_2}^2) -\frac{K_2}{A}						(\abs{\eta_1}^2 -\abs{\eta_2}^2)\nonumber\right.\\
+	&\left.-\sqrt{3}\frac{K_2}{A}(\eta_1\eta_2^*+\eta_1^*\eta_2)\right)^2+\frac{1}{2}				\left(\frac{K_1}{A}(\abs{\eta_1}^2+\abs{\eta_2}^2) -\frac{K_2}{A}								(\abs{\eta_1}^2 -\abs{\eta_2}^2)+\sqrt{3}\frac{K_2}{A}(\eta_1\eta_2^*+\eta_1^*\eta_2)			\right)\nonumber\\
+	&-\frac{1}{4}\left(\frac{K_1}{A}(\abs{\eta_1}^2+\abs{\eta_2}^2)
+	-\frac{K_2}{A}(\abs{\eta_1}^2 -\abs{\eta_2}^2) +\sqrt{3}\frac{K_2}{A}							(\eta_1\eta_2^*+\eta_1^*\eta_2)\right)^2 + \order{\eta^6}
+\end{align}
+After further simplification we get the following effective free energy
+\begin{align}
+	f=f_{sc} + \frac{3}{2}\frac{K_1}{A}(\abs{\eta_1}^2+\abs{\eta_2}^2)-\frac{3}{4}					\left(\frac{K_1}{A}\right)^2(\abs{\eta_1}^2+\abs{\eta_2}^2)^2-\frac{6}{4}\left(\frac{K_2}		{A}\right)^2(\abs{\eta_1}^2-\abs{\eta_2}^2)
+\end{align}
+Thus we see that we get the following effective free energy
+\begin{align}
+f_{ef}=\left(\alpha + \frac{3}{2}\frac{K_1}{A}\right)(\abs{\eta_1}^2+\abs{\eta_2}^2)+\left(\beta_1-\frac{3}{4}\left(\frac{K_1}{A}\right)^2\right)(\abs{\eta_1}^2+\abs{\eta_2}^2)^2+\left(\beta_2-\frac{6}{4}\left(\frac{K_2}{A}\right)^2\right)(\abs{\eta_1}^2-\abs{\eta_2}^2)
+\end{align}
+It is clear the magnetic fluctuations can change the sign of the $\beta_2$ term which 			will allow the possibility of a different ground state. The principal idea is that that 	at higher temperature  the coefficient is  $(\abs{\eta_1}^2-\abs{\eta_2}^2<0)$ and the real state is energetically favored. While at lower temperature the true superconducting  ground state exists with that coefficient can become positive and transition in the the broken time reversal state.
+\section{Spin Fluctuation feedback effect}
+\label{He3}
+We see that \ref{Landau_UP} in  magnetic fluctuations can be treated by phenomenological approach, where the fluctuations favor as different ground state as compared to the true superconducting ground state. We now apply the same phenomenological method to superfluid He3 to capture the celebrated microscopic Spin-Fluctuation feedback effect. The anisoptropic superfluid phases of liquid He3 was the first example of unconventional pairing. Due the repulsion between the atoms it was realized that pairing would take place in a non zero angular momentum channel. It was seen that the cooper pair formed in superfluid He3 had $L=1$ and $S=1$ , i.e. it was a p-wave spin triplet. The order parameter $d_{i\alpha}$ is therefore a 3 $\times$ 3 matrix with each element being complex. The i index is the spin index and the $\alpha$ is the spin index. The pairing in this material is mediated by spin fluctuations which arises from the virtual spin polarization of the material(these are also know as virtual paramagnons).  It is this spin polarization which favors spin triplet pairing and suppresses spin singlet pairing. The phase diagram of $^{3}\text{He}$
+Note that here unlike \eqref{Zm}, we do not have a coupling that is diagonal. To be able to integrate out each of the magnetic fluctuations we use the following identity 
+\begin{align}
+\int _{-\infty}^{\infty} e^{-\frac{1}{2}\sum_{i,j=1}^nA_{ij}x_ix_j}d^nx=\sqrt{\frac{(2\pi)^n}{DetA}}
+\end{align}
+where for us $x_i = m_x,m_y,m_z$ and from the form of the  $F_{sc-m}$ coupling we see that the matrix $A_{ij}$ for us will be the following
+
+\begin{align}
+A_{ij}=
+\begin{pmatrix}
+A_1+A_2 d_{ab}d_{ab}^*+K_1d_{xc}d_{xc}^* & \frac{1}{2}K_1\left(d_{xd}d_{yd}^*+d_{xe}^*d_{ye}\right)& \frac{1}{2}K_1\left(d_{xf}d_{zf}^*+d_{xg}^*d_{zg}\right)\\
+\frac{1}{2}K_1\left(d_{xh}d_{yh}^*+d_{xi}^*d_{yi}\right)& A_1+A_2 d_{jk}d_{jk}^*+K_1d_{yl}d_{yl}^* & \frac{1}{2}K_1\left(d_{ym}d_{zm}^*+d_{yn}^*d_{zn}\right)\\
+\frac{1}{2}K_1\left(d_{xo}d_{zo}^*+d_{xp}^*d_{pn}\right)&\frac{1}{2}K_1\left(d_{yq}d_{zq}^*+d_{yr}^*d_{zr}\right)&A_1+A_2 d_{st}d_{st}^*+K_1d_{xu}d_{xu}^*
+\end{pmatrix}
+\end{align}
+where the repeated indices are summed over. The determinant of this matrix is then, given as 
+\begin{align}
+DetA = 
+\end{align} 
+
+\bibliography{biblio}
+\end{document}
