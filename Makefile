@@ -6,7 +6,7 @@ all: draft
 	
 draft: $(DEPS)
 	pdflatex -interaction=nonstopmode  $(TARGET)
-	#bibtex $(TARGET)
+	bibtex $(TARGET)
 	pdflatex -interaction=nonstopmode  $(TARGET)
 	pdflatex -interaction=nonstopmode  $(TARGET)
 
